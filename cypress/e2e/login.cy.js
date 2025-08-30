@@ -1,8 +1,16 @@
 /// <reference types="cypress" />
 
 describe('Funcionalidade login', () => {
+
+beforeEach(()=>{
+  cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+})
+
+afterEach(()=>{
+  cy.screenshot()
+})
+
   it('Senha inválida', () => {
-    cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
     cy.get('[name="username"]').type('aluno_ebac@teste.com')
     cy.get('.woocommerce-form > :nth-child(2) > [name="password"]').type('teste@teste.com')
     cy.get('[name="login"]').click()
@@ -12,7 +20,6 @@ describe('Funcionalidade login', () => {
   })
 
   it('Email inválido', () => {
-    cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
     cy.get('[name="username"]').type('ebac@teste.com')
     cy.get('.woocommerce-form > :nth-child(2) > [name="password"]').type('teste@teste.com')
     cy.get('[name="login"]').click()
