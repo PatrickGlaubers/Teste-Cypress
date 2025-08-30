@@ -1,1 +1,1 @@
-Teste usando Cypress
+Testes automatizados usando Cypress
