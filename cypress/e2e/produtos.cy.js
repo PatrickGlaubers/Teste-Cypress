@@ -27,7 +27,7 @@ describe('Funcionalidade - Página de produtos', () => {
      cy.get('.woocommerce-message').should('contain', quantidade + ' × “Argus All-Weather Tank” foram adicionados no seu carrinho.')
   })
 
-  it.only('Deve adicionar produtos ao carrinho usando comandos personalizados', () =>{
+  it('Deve adicionar produtos ao carrinho usando comandos personalizados', () =>{
   var quantidade = 2
   var nomeProduto = 'Aero Daily Fitness Tee'
   var tamanho = 'XS'
@@ -38,7 +38,7 @@ describe('Funcionalidade - Página de produtos', () => {
   .should('contain', `${quantidade} × “${nomeProduto}” foram adicionados no seu carrinho.`)
   })
 
-  it.only('Deve adicionar produtos ao carrinho usando comandos personalizados', () =>{
+  it('Deve adicionar produtos ao carrinho usando comandos personalizados', () =>{
   var quantidade = 2
   var nomeProduto = 'Aether Gym Pant'
   var tamanho = '32'
