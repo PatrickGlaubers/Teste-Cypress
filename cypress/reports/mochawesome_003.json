@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-31T23:17:55.439Z",
+    "end": "2025-08-31T23:18:27.204Z",
+    "duration": 31765,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7911ad74-6cb6-43b2-ba26-37f0609d64e8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\produtos.cy.js",
+      "file": "cypress\\e2e\\produtos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a60209a6-b366-4146-854a-5b90f866adf3",
+          "title": "Funcionalidade - Página de produtos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve selecionar um produto da lista",
+              "fullTitle": "Funcionalidade - Página de produtos Deve selecionar um produto da lista",
+              "timedOut": null,
+              "duration": 6361,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.product-block')\n//.first()\n//.last()\n//.eq(3)\n.contains('Ariel Roll Sleeve Sweatshirt').click();",
+              "err": {},
+              "uuid": "2ff0aca0-e3d5-4af9-9e8a-99824b514e32",
+              "parentUUID": "a60209a6-b366-4146-854a-5b90f866adf3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar produtos ao carrinho",
+              "fullTitle": "Funcionalidade - Página de produtos Deve adicionar produtos ao carrinho",
+              "timedOut": null,
+              "duration": 9331,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var quantidade = 3;\ncy.get('.product-block').contains('Argus All-Weather Tank').click();\ncy.get('.button-variable-item-XS').click();\ncy.get(':nth-child(2) > .value > .variable-items-wrapper > .variable-item').click();\ncy.get('[name=\"quantity\"]').clear().type(quantidade);\ncy.get('.single_add_to_cart_button').click();\ncy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade);\ncy.get('.woocommerce-message').should('contain', quantidade + ' × “Argus All-Weather Tank” foram adicionados no seu carrinho.');",
+              "err": {},
+              "uuid": "b3b3b340-92b4-4879-bcde-6da1a0b625ba",
+              "parentUUID": "a60209a6-b366-4146-854a-5b90f866adf3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar produtos ao carrinho usando comandos personalizados",
+              "fullTitle": "Funcionalidade - Página de produtos Deve adicionar produtos ao carrinho usando comandos personalizados",
+              "timedOut": null,
+              "duration": 7722,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var quantidade = 2;\nvar nomeProduto = 'Aero Daily Fitness Tee';\nvar tamanho = 'XS';\nvar cor = 'Yellow';\ncy.addProdutos(nomeProduto, quantidade, tamanho, cor);\ncy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade);\ncy.get('.woocommerce-message').should('contain', `${quantidade} × “${nomeProduto}” foram adicionados no seu carrinho.`);",
+              "err": {},
+              "uuid": "6cb5cea3-6440-4d76-ab36-312b5e511bdd",
+              "parentUUID": "a60209a6-b366-4146-854a-5b90f866adf3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar produtos ao carrinho usando comandos personalizados",
+              "fullTitle": "Funcionalidade - Página de produtos Deve adicionar produtos ao carrinho usando comandos personalizados",
+              "timedOut": null,
+              "duration": 7500,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var quantidade = 2;\nvar nomeProduto = 'Aether Gym Pant';\nvar tamanho = '32';\nvar cor = 'Brown';\ncy.addProdutos(nomeProduto, quantidade, tamanho, cor);\ncy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade);\ncy.get('.woocommerce-message').should('contain', `“${nomeProduto}” foram adicionados no seu carrinho.`);",
+              "err": {},
+              "uuid": "f239cdd5-e4e4-4bab-b804-83178a0ffe99",
+              "parentUUID": "a60209a6-b366-4146-854a-5b90f866adf3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ff0aca0-e3d5-4af9-9e8a-99824b514e32",
+            "b3b3b340-92b4-4879-bcde-6da1a0b625ba",
+            "6cb5cea3-6440-4d76-ab36-312b5e511bdd",
+            "f239cdd5-e4e4-4bab-b804-83178a0ffe99"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30914,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
