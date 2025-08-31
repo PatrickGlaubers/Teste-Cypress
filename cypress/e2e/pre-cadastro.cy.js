@@ -16,7 +16,7 @@ describe('Funcionalidade Pré-Cadastro', () => {
   it('Deve completar o pré cadastro com sucesso', () => {
 
     cy.get('[name="email"]').type(email)
-    cy.get('.register > :nth-child(2) > [name="password"]').type(password)
+    cy.get('.register > :nth-child(2) > [name="password"]').type(password, {log: false})
     cy.get('[name="register"]').click()
 
     cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
