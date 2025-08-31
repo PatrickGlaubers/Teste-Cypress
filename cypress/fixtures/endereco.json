@@ -1,0 +1,45 @@
+[
+
+    {
+        "nome": "Teste",
+        "sobrenome": "Qualitativo",
+        "empresa": "TesteInternacional",
+        "pais": "Brasil",
+        "endereco": "Av Paulista",
+        "complementar": "Unidade 01",
+        "cidade": "São Paulo",
+        "estado": "São Paulo",
+        "cep": "01310-000",
+        "telefone": "99999-9999",
+        "email": "teste_aluno11@teste.com"
+
+    },
+    {
+        "nome": "Ana",
+        "sobrenome": "Lima",
+        "empresa": "TesteNacional",
+        "pais": "Brasil",
+        "endereco": "Copacabana",
+        "complementar": "Unidade 03",
+        "cidade": "Rio de Janeiro",
+        "estado": "Rio de Janeiro",
+        "cep": "22011-002",
+        "telefone": "98888-8888",
+        "email": "AnaLima@teste.com"
+
+    },
+    {
+        "nome": "Pedro",
+        "sobrenome": "Silva",
+        "empresa": "SuperTeste",
+        "pais": "Brasil",
+        "endereco": "Avenida Otacílio Negrão",
+        "complementar": "Unidade 05",
+        "cidade": "Belo Horizone",
+        "estado": "Minas Gerais",
+        "cep": "5363101",
+        "telefone": "97777-7777",
+        "email": "PedroSilva@teste.com"
+
+    }
+]
