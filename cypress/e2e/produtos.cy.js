@@ -13,7 +13,7 @@ describe('Funcionalidade - Página de produtos', () => {
       .click()
   })
 
-  it('Deve adicionar um produto ao carrinho', () => {
+  it('Deve adicionar produtos ao carrinho', () => {
     var quantidade = 3
 
     cy.get('.product-block')
@@ -23,6 +23,31 @@ describe('Funcionalidade - Página de produtos', () => {
      cy.get('[name="quantity"]').clear().type(quantidade)
      cy.get('.single_add_to_cart_button').click()
      cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
+
      cy.get('.woocommerce-message').should('contain', quantidade + ' × “Argus All-Weather Tank” foram adicionados no seu carrinho.')
   })
+
+  it.only('Deve adicionar produtos ao carrinho usando comandos personalizados', () =>{
+  var quantidade = 2
+  var nomeProduto = 'Aero Daily Fitness Tee'
+  var tamanho = 'XS'
+  var cor = 'Yellow'
+  cy.addProdutos(nomeProduto, quantidade, tamanho, cor)
+  cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
+  cy.get('.woocommerce-message')
+  .should('contain', `${quantidade} × “${nomeProduto}” foram adicionados no seu carrinho.`)
+  })
+
+  it.only('Deve adicionar produtos ao carrinho usando comandos personalizados', () =>{
+  var quantidade = 2
+  var nomeProduto = 'Aether Gym Pant'
+  var tamanho = '32'
+  var cor = 'Brown'
+  cy.addProdutos(nomeProduto, quantidade, tamanho, cor)
+  cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
+  cy.get('.woocommerce-message')
+  .should('contain', `“${nomeProduto}” foram adicionados no seu carrinho.`)
+  })
+
+
 })

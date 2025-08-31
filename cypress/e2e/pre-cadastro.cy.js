@@ -27,4 +27,8 @@ describe('Funcionalidade Pré-Cadastro', () => {
     cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'A partir do painel de controle de sua conta')
   })
 
+  it.only('Deve completar o pré cadastro com sucesso usando comandos personalizados', () =>{
+    cy.preCadastro(email, password, firstName, lastName)
+  })
+
 })
